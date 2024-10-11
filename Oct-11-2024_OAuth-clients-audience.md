@@ -1,7 +1,7 @@
 > In OAuth, audiences refer to the specific resources or services that an OAuth client is authorized to access on behalf of a user or themselves (in the case of machine-to-machine authentication).
 
 # 简介
-audiences 定义 OAuth client 被许可访问的资源。假如有以下两个受保护 API：
+audiences 定义当前 access token 许可访问的资源。假如有以下两个受保护 API：
 ```
 https://api-server/v1/users
 https://api-server/v1/orders
@@ -17,7 +17,7 @@ auth server（https://auth.example.com） 可以颁发以下 access token，其�
   "scope": "read write"
 }
 ```
-aud 可以定义为列表：
+aud 也可定义为列表：
 ```
 {
   "iss": "https://auth.example.com",
